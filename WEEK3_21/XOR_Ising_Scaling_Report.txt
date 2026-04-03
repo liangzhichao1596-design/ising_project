@@ -1,0 +1,17 @@
+XOR/XNOR Ising Modeling Scale Experiment Report
+============================================================
+Decomposed Ratio (%)      | Total Qubits Used   
+------------------------------------------------------------
+0                         | 22                  
+10                        | 29                  
+20                        | 43                  
+30                        | 36                  
+40                        | 41                  
+50                        | 50                  
+60                        | 64                  
+70                        | 74                  
+80                        | 80                  
+90                        | 85                  
+100                       | 92                  
+============================================================
+Note: Decomposed mode uses AND/OR/NOT gates which significantly increases Qubit count.
