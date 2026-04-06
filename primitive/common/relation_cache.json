@@ -1315,5 +1315,62 @@
       "coefficient_bound=3",
       "direct visible-port solve (minimal ancilla search)"
     ]
+  },
+  "LUT3:O:init=172": {
+    "name": "LUT3_O",
+    "visible_ports": [
+      "I0",
+      "I1",
+      "I2",
+      "O"
+    ],
+    "ancilla_ports": [],
+    "polynomial": [
+      {
+        "vars": [],
+        "num": 2,
+        "den": 1
+      },
+      {
+        "vars": [
+          "I0",
+          "O"
+        ],
+        "num": -1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "I1",
+          "O"
+        ],
+        "num": -1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "I0",
+          "I2",
+          "O"
+        ],
+        "num": -1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "I1",
+          "I2",
+          "O"
+        ],
+        "num": 1,
+        "den": 1
+      }
+    ],
+    "notes": [
+      "MILP-synthesized with ancilla_count=0",
+      "integer_scale=1/1",
+      "coefficient_bound=3",
+      "direct visible-port solve (minimal ancilla search before decomposition)"
+    ]
   }
 }
