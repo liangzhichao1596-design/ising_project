@@ -1,0 +1,68 @@
+========================================================================================
+Primitive: BUFGMUX_CTRL
+========================================================================================
+Summary: 2:1 global clock mux.
+
+[1] Ising Function
+2 - q[0]*q[3] - q[1]*q[3] + q[0]*q[2]*q[3] - q[1]*q[2]*q[3]
+
+[2] Qubit Count
+4
+
+[3] Qubit <-> Primitive Port Mapping
+q[0] : [INPUT] I0
+q[1] : [INPUT] I1
+q[2] : [INPUT] S
+q[3] : [OUTPUT] O
+
+[4] Primitive Truth Table
+I0 | I1 | S | O
+---+----+---+--
+0  | 0  | 0 | 0
+0  | 0  | 1 | 0
+0  | 1  | 0 | 0
+0  | 1  | 1 | 1
+1  | 0  | 0 | 1
+1  | 0  | 1 | 0
+1  | 1  | 0 | 1
+1  | 1  | 1 | 1
+
+[5] Ising Truth Table (All Qubit Combinations)
+q[0] | q[1] | q[2] | q[3] | energy | logic_valid | visible_min_energy | is_visible_ground
+-----+------+------+------+--------+-------------+--------------------+------------------
+-1   | -1   | -1   | -1   | 0      | 1           | 0                  | 1                
+-1   | -1   | -1   | 1    | 4      | 0           | 4                  | 1                
+-1   | -1   | 1    | -1   | 0      | 1           | 0                  | 1                
+-1   | -1   | 1    | 1    | 4      | 0           | 4                  | 1                
+-1   | 1    | -1   | -1   | 0      | 1           | 0                  | 1                
+-1   | 1    | -1   | 1    | 4      | 0           | 4                  | 1                
+-1   | 1    | 1    | -1   | 4      | 0           | 4                  | 1                
+-1   | 1    | 1    | 1    | 0      | 1           | 0                  | 1                
+1    | -1   | -1   | -1   | 4      | 0           | 4                  | 1                
+1    | -1   | -1   | 1    | 0      | 1           | 0                  | 1                
+1    | -1   | 1    | -1   | 0      | 1           | 0                  | 1                
+1    | -1   | 1    | 1    | 4      | 0           | 4                  | 1                
+1    | 1    | -1   | -1   | 4      | 0           | 4                  | 1                
+1    | 1    | -1   | 1    | 0      | 1           | 0                  | 1                
+1    | 1    | 1    | -1   | 4      | 0           | 4                  | 1                
+1    | 1    | 1    | 1    | 0      | 1           | 0                  | 1                
+
+[6] Minimum Energy
+0
+
+[9] Verification Summary
+valid_visible_assignments = 8
+invalid_visible_assignments = 8
+all_valid_states_have_min_energy_0 = True
+all_invalid_states_have_min_energy_gt_0 = True
+verification_passed = True
+
+[10] Base Relation Synthesis Notes
+BUF: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+CONST0: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+CONST1: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+MUX2: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+NOT: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+OR2: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+XOR2: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+

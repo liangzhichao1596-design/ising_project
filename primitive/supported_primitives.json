@@ -1,0 +1,517 @@
+[
+  {
+    "primitive": "BSCANE2",
+    "status": "unsupported",
+    "reason": "unsupported: device-configuration or silicon-service primitive rather than logic functionality"
+  },
+  {
+    "primitive": "BUFG",
+    "status": "supported",
+    "reason": "Global clock simple buffer."
+  },
+  {
+    "primitive": "BUFGCE",
+    "status": "supported",
+    "reason": "Clock-enable buffer, modeled as O=0 when CE=0 else O=I."
+  },
+  {
+    "primitive": "BUFGCE_1",
+    "status": "supported",
+    "reason": "Clock-enable buffer, modeled as O=1 when CE=0 else O=I."
+  },
+  {
+    "primitive": "BUFGCTRL",
+    "status": "unsupported",
+    "reason": "unsupported: steady-state approximation is possible, but divider/hold/init semantics are not fully captured yet"
+  },
+  {
+    "primitive": "BUFGMUX",
+    "status": "supported",
+    "reason": "2:1 clock mux."
+  },
+  {
+    "primitive": "BUFGMUX_1",
+    "status": "supported",
+    "reason": "2:1 clock mux, steady-state behavior only."
+  },
+  {
+    "primitive": "BUFGMUX_CTRL",
+    "status": "supported",
+    "reason": "2:1 global clock mux."
+  },
+  {
+    "primitive": "BUFH",
+    "status": "supported",
+    "reason": "Regional clock buffer."
+  },
+  {
+    "primitive": "BUFHCE",
+    "status": "unsupported",
+    "reason": "unsupported: steady-state approximation is possible, but divider/hold/init semantics are not fully captured yet"
+  },
+  {
+    "primitive": "BUFIO",
+    "status": "supported",
+    "reason": "I/O clock buffer."
+  },
+  {
+    "primitive": "BUFMR",
+    "status": "supported",
+    "reason": "Multi-region clock buffer."
+  },
+  {
+    "primitive": "BUFMRCE",
+    "status": "unsupported",
+    "reason": "unsupported: steady-state approximation is possible, but divider/hold/init semantics are not fully captured yet"
+  },
+  {
+    "primitive": "BUFR",
+    "status": "unsupported",
+    "reason": "unsupported: steady-state approximation is possible, but divider/hold/init semantics are not fully captured yet"
+  },
+  {
+    "primitive": "CAPTUREE2",
+    "status": "unsupported",
+    "reason": "unsupported: device-configuration or silicon-service primitive rather than logic functionality"
+  },
+  {
+    "primitive": "CARRY4",
+    "status": "supported",
+    "reason": "Fast carry chain, built compositionally from verified cubic OR/MUX/XOR constraints."
+  },
+  {
+    "primitive": "CFGLUT5",
+    "status": "unsupported",
+    "reason": "unsupported: not yet decomposed into a stable cubic binary model in this pass"
+  },
+  {
+    "primitive": "DCIRESET",
+    "status": "unsupported",
+    "reason": "unsupported: device-configuration or silicon-service primitive rather than logic functionality"
+  },
+  {
+    "primitive": "DNA_PORT",
+    "status": "unsupported",
+    "reason": "unsupported: device-configuration or silicon-service primitive rather than logic functionality"
+  },
+  {
+    "primitive": "DSP48E1",
+    "status": "unsupported",
+    "reason": "unsupported: not yet decomposed into a stable cubic binary model in this pass"
+  },
+  {
+    "primitive": "EFUSE_USR",
+    "status": "unsupported",
+    "reason": "unsupported: device-configuration or silicon-service primitive rather than logic functionality"
+  },
+  {
+    "primitive": "FDCE",
+    "status": "unsupported",
+    "reason": "unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation"
+  },
+  {
+    "primitive": "FDPE",
+    "status": "unsupported",
+    "reason": "unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation"
+  },
+  {
+    "primitive": "FDRE",
+    "status": "unsupported",
+    "reason": "unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation"
+  },
+  {
+    "primitive": "FDSE",
+    "status": "unsupported",
+    "reason": "unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation"
+  },
+  {
+    "primitive": "FIFO18E1",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "FIFO36E1",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "FRAME_ECCE2",
+    "status": "unsupported",
+    "reason": "unsupported: device-configuration or silicon-service primitive rather than logic functionality"
+  },
+  {
+    "primitive": "IBUF",
+    "status": "supported",
+    "reason": "Input buffer."
+  },
+  {
+    "primitive": "IBUF_IBUFDISABLE",
+    "status": "unsupported",
+    "reason": "unsupported: contains disable/'No Change' semantics that need explicit state retention variables"
+  },
+  {
+    "primitive": "IBUF_INTERMDISABLE",
+    "status": "unsupported",
+    "reason": "unsupported: contains disable/'No Change' semantics that need explicit state retention variables"
+  },
+  {
+    "primitive": "IBUFDS",
+    "status": "supported",
+    "reason": "Differential input buffer under ideal complementary drive."
+  },
+  {
+    "primitive": "IBUFDS_DIFF_OUT",
+    "status": "supported",
+    "reason": "Differential input buffer with both phases exposed internally."
+  },
+  {
+    "primitive": "IBUFDS_DIFF_OUT_IBUFDISABLE",
+    "status": "unsupported",
+    "reason": "unsupported: contains disable/'No Change' semantics that need explicit state retention variables"
+  },
+  {
+    "primitive": "IBUFDS_DIFF_OUT_INTERMDISABLE",
+    "status": "unsupported",
+    "reason": "unsupported: contains disable/'No Change' semantics that need explicit state retention variables"
+  },
+  {
+    "primitive": "IBUFDS_GTE2",
+    "status": "unsupported",
+    "reason": "unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation"
+  },
+  {
+    "primitive": "IBUFDS_IBUFDISABLE",
+    "status": "unsupported",
+    "reason": "unsupported: contains disable/'No Change' semantics that need explicit state retention variables"
+  },
+  {
+    "primitive": "IBUFDS_INTERMDISABLE",
+    "status": "unsupported",
+    "reason": "unsupported: contains disable/'No Change' semantics that need explicit state retention variables"
+  },
+  {
+    "primitive": "ICAPE2",
+    "status": "unsupported",
+    "reason": "unsupported: device-configuration or silicon-service primitive rather than logic functionality"
+  },
+  {
+    "primitive": "IDDR",
+    "status": "unsupported",
+    "reason": "unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation"
+  },
+  {
+    "primitive": "IDDR_2CLK",
+    "status": "unsupported",
+    "reason": "unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation"
+  },
+  {
+    "primitive": "IDELAYCTRL",
+    "status": "unsupported",
+    "reason": "unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation"
+  },
+  {
+    "primitive": "IDELAYE2",
+    "status": "unsupported",
+    "reason": "unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation"
+  },
+  {
+    "primitive": "IN_FIFO",
+    "status": "unsupported",
+    "reason": "unsupported: serialized/clocked data movement primitive, not a static combinational relation"
+  },
+  {
+    "primitive": "IOBUF",
+    "status": "unsupported",
+    "reason": "unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits"
+  },
+  {
+    "primitive": "IOBUF_DCIEN",
+    "status": "unsupported",
+    "reason": "unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits"
+  },
+  {
+    "primitive": "IOBUF_INTERMDISABLE",
+    "status": "unsupported",
+    "reason": "unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits"
+  },
+  {
+    "primitive": "IOBUFDS",
+    "status": "unsupported",
+    "reason": "unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits"
+  },
+  {
+    "primitive": "IOBUFDS_DCIEN",
+    "status": "unsupported",
+    "reason": "unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits"
+  },
+  {
+    "primitive": "IOBUFDS_DIFF_OUT",
+    "status": "unsupported",
+    "reason": "unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits"
+  },
+  {
+    "primitive": "IOBUFDS_DIFF_OUT_DCIEN",
+    "status": "unsupported",
+    "reason": "unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits"
+  },
+  {
+    "primitive": "IOBUFDS_DIFF_OUT_INTERMDISABLE",
+    "status": "unsupported",
+    "reason": "unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits"
+  },
+  {
+    "primitive": "IOBUFDS_INTERMDISABLE",
+    "status": "unsupported",
+    "reason": "unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits"
+  },
+  {
+    "primitive": "ISERDESE2",
+    "status": "unsupported",
+    "reason": "unsupported: serialized/clocked data movement primitive, not a static combinational relation"
+  },
+  {
+    "primitive": "KEEPER",
+    "status": "unsupported",
+    "reason": "unsupported: not yet decomposed into a stable cubic binary model in this pass"
+  },
+  {
+    "primitive": "LDCE",
+    "status": "unsupported",
+    "reason": "unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation"
+  },
+  {
+    "primitive": "LDPE",
+    "status": "unsupported",
+    "reason": "unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation"
+  },
+  {
+    "primitive": "LUT1",
+    "status": "supported",
+    "reason": "Parameterized 1-input LUT synthesized by a Shannon MUX tree."
+  },
+  {
+    "primitive": "LUT2",
+    "status": "supported",
+    "reason": "Parameterized 2-input LUT synthesized by a Shannon MUX tree."
+  },
+  {
+    "primitive": "LUT3",
+    "status": "supported",
+    "reason": "Parameterized 3-input LUT synthesized by a Shannon MUX tree."
+  },
+  {
+    "primitive": "LUT4",
+    "status": "supported",
+    "reason": "Parameterized 4-input LUT synthesized by a Shannon MUX tree."
+  },
+  {
+    "primitive": "LUT5",
+    "status": "supported",
+    "reason": "Parameterized 5-input LUT synthesized by a Shannon MUX tree."
+  },
+  {
+    "primitive": "LUT6",
+    "status": "supported",
+    "reason": "Parameterized 6-input LUT synthesized by a Shannon MUX tree."
+  },
+  {
+    "primitive": "LUT6_2",
+    "status": "supported",
+    "reason": "Parameterized dual-output LUT synthesized as coupled O5/O6 Shannon trees."
+  },
+  {
+    "primitive": "MMCME2_ADV",
+    "status": "unsupported",
+    "reason": "unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation"
+  },
+  {
+    "primitive": "MMCME2_BASE",
+    "status": "unsupported",
+    "reason": "unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation"
+  },
+  {
+    "primitive": "MUXF7",
+    "status": "supported",
+    "reason": "2:1 LUT mux."
+  },
+  {
+    "primitive": "MUXF8",
+    "status": "supported",
+    "reason": "2:1 LUT mux."
+  },
+  {
+    "primitive": "OBUF",
+    "status": "supported",
+    "reason": "Output buffer."
+  },
+  {
+    "primitive": "OBUFDS",
+    "status": "supported",
+    "reason": "Differential output buffer."
+  },
+  {
+    "primitive": "OBUFT",
+    "status": "unsupported",
+    "reason": "unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits"
+  },
+  {
+    "primitive": "OBUFTDS",
+    "status": "unsupported",
+    "reason": "unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits"
+  },
+  {
+    "primitive": "ODDR",
+    "status": "unsupported",
+    "reason": "unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation"
+  },
+  {
+    "primitive": "ODELAYE2",
+    "status": "unsupported",
+    "reason": "unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation"
+  },
+  {
+    "primitive": "OSERDESE2",
+    "status": "unsupported",
+    "reason": "unsupported: serialized/clocked data movement primitive, not a static combinational relation"
+  },
+  {
+    "primitive": "OUT_FIFO",
+    "status": "unsupported",
+    "reason": "unsupported: serialized/clocked data movement primitive, not a static combinational relation"
+  },
+  {
+    "primitive": "PLLE2_ADV",
+    "status": "unsupported",
+    "reason": "unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation"
+  },
+  {
+    "primitive": "PLLE2_BASE",
+    "status": "unsupported",
+    "reason": "unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation"
+  },
+  {
+    "primitive": "PULLDOWN",
+    "status": "supported",
+    "reason": "Weak pull-down source."
+  },
+  {
+    "primitive": "PULLUP",
+    "status": "supported",
+    "reason": "Weak pull-up source."
+  },
+  {
+    "primitive": "RAM128X1D",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "RAM128X1S",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "RAM256X1S",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "RAM32M",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "RAM32X1D",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "RAM32X1S",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "RAM32X1S_1",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "RAM32X2S",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "RAM64M",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "RAM64X1D",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "RAM64X1S",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "RAM64X1S_1",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "RAMB18E1",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "RAMB36E1",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "ROM128X1",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "ROM256X1",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "ROM32X1",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "ROM64X1",
+    "status": "unsupported",
+    "reason": "unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow"
+  },
+  {
+    "primitive": "SRL16E",
+    "status": "unsupported",
+    "reason": "unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation"
+  },
+  {
+    "primitive": "SRLC32E",
+    "status": "unsupported",
+    "reason": "unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation"
+  },
+  {
+    "primitive": "STARTUPE2",
+    "status": "unsupported",
+    "reason": "unsupported: device-configuration or silicon-service primitive rather than logic functionality"
+  },
+  {
+    "primitive": "USR_ACCESSE2",
+    "status": "unsupported",
+    "reason": "unsupported: device-configuration or silicon-service primitive rather than logic functionality"
+  },
+  {
+    "primitive": "XADC",
+    "status": "unsupported",
+    "reason": "unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation"
+  }
+]

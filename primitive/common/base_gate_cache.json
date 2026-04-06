@@ -1,0 +1,249 @@
+{
+  "BUF": {
+    "name": "BUF",
+    "visible_ports": [
+      "a",
+      "x"
+    ],
+    "ancilla_ports": [],
+    "polynomial": [
+      {
+        "vars": [],
+        "num": 1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "a",
+          "x"
+        ],
+        "num": -1,
+        "den": 1
+      }
+    ],
+    "notes": [
+      "MILP-synthesized with ancilla_count=0",
+      "integer_scale=1/1",
+      "coefficient_bound=3"
+    ]
+  },
+  "NOT": {
+    "name": "NOT",
+    "visible_ports": [
+      "a",
+      "x"
+    ],
+    "ancilla_ports": [],
+    "polynomial": [
+      {
+        "vars": [],
+        "num": 1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "a",
+          "x"
+        ],
+        "num": 1,
+        "den": 1
+      }
+    ],
+    "notes": [
+      "MILP-synthesized with ancilla_count=0",
+      "integer_scale=1/1",
+      "coefficient_bound=3"
+    ]
+  },
+  "CONST0": {
+    "name": "CONST0",
+    "visible_ports": [
+      "x"
+    ],
+    "ancilla_ports": [],
+    "polynomial": [
+      {
+        "vars": [],
+        "num": 1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "x"
+        ],
+        "num": 1,
+        "den": 1
+      }
+    ],
+    "notes": [
+      "MILP-synthesized with ancilla_count=0",
+      "integer_scale=1/1",
+      "coefficient_bound=3"
+    ]
+  },
+  "CONST1": {
+    "name": "CONST1",
+    "visible_ports": [
+      "x"
+    ],
+    "ancilla_ports": [],
+    "polynomial": [
+      {
+        "vars": [],
+        "num": 1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "x"
+        ],
+        "num": -1,
+        "den": 1
+      }
+    ],
+    "notes": [
+      "MILP-synthesized with ancilla_count=0",
+      "integer_scale=1/1",
+      "coefficient_bound=3"
+    ]
+  },
+  "OR2": {
+    "name": "OR2",
+    "visible_ports": [
+      "a",
+      "b",
+      "x"
+    ],
+    "ancilla_ports": [],
+    "polynomial": [
+      {
+        "vars": [],
+        "num": 2,
+        "den": 1
+      },
+      {
+        "vars": [
+          "x"
+        ],
+        "num": -1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "a",
+          "x"
+        ],
+        "num": -1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "b",
+          "x"
+        ],
+        "num": -1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "a",
+          "b",
+          "x"
+        ],
+        "num": 1,
+        "den": 1
+      }
+    ],
+    "notes": [
+      "MILP-synthesized with ancilla_count=0",
+      "integer_scale=1/1",
+      "coefficient_bound=3"
+    ]
+  },
+  "XOR2": {
+    "name": "XOR2",
+    "visible_ports": [
+      "a",
+      "b",
+      "x"
+    ],
+    "ancilla_ports": [],
+    "polynomial": [
+      {
+        "vars": [],
+        "num": 1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "a",
+          "b",
+          "x"
+        ],
+        "num": 1,
+        "den": 1
+      }
+    ],
+    "notes": [
+      "MILP-synthesized with ancilla_count=0",
+      "integer_scale=1/1",
+      "coefficient_bound=3"
+    ]
+  },
+  "MUX2": {
+    "name": "MUX2",
+    "visible_ports": [
+      "s",
+      "i0",
+      "i1",
+      "x"
+    ],
+    "ancilla_ports": [],
+    "polynomial": [
+      {
+        "vars": [],
+        "num": 2,
+        "den": 1
+      },
+      {
+        "vars": [
+          "i0",
+          "x"
+        ],
+        "num": -1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "i1",
+          "x"
+        ],
+        "num": -1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "i0",
+          "s",
+          "x"
+        ],
+        "num": 1,
+        "den": 1
+      },
+      {
+        "vars": [
+          "i1",
+          "s",
+          "x"
+        ],
+        "num": -1,
+        "den": 1
+      }
+    ],
+    "notes": [
+      "MILP-synthesized with ancilla_count=0",
+      "integer_scale=1/1",
+      "coefficient_bound=3"
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+========================================================================================
+Primitive: LUT6_2
+========================================================================================
+Summary: Parameterized dual-output LUT synthesized as coupled O5/O6 Shannon trees.
+
+[1] Ising Function
+23 + q[8] - q[9] - q[6]*q[8] - q[6]*q[18] - q[7]*q[14] - q[8]*q[10] - q[8]*q[11] - q[8]*q[12] - q[8]*q[13] - q[8]*q[14] - q[8]*q[15] - q[8]*q[16] - q[8]*q[17] - q[8]*q[18] - q[9]*q[10] - q[9]*q[15] - q[10]*q[11] - q[11]*q[12] - q[12]*q[13] - q[13]*q[14] - q[15]*q[16] - q[16]*q[17] - q[17]*q[18] + q[0]*q[8]*q[10] + q[0]*q[8]*q[15] - q[0]*q[9]*q[10] - q[0]*q[9]*q[15] + q[1]*q[8]*q[11] + q[1]*q[8]*q[16] - q[1]*q[10]*q[11] - q[1]*q[15]*q[16] + q[2]*q[8]*q[12] + q[2]*q[8]*q[17] - q[2]*q[11]*q[12] - q[2]*q[16]*q[17] + q[3]*q[8]*q[13] + q[3]*q[8]*q[18] - q[3]*q[12]*q[13] - q[3]*q[17]*q[18] + q[4]*q[6]*q[8] - q[4]*q[6]*q[18] + q[4]*q[8]*q[14] - q[4]*q[13]*q[14]
+
+[2] Qubit Count
+19
+
+[3] Qubit <-> Primitive Port Mapping
+q[0] : [INPUT] I0
+q[1] : [INPUT] I1
+q[2] : [INPUT] I2
+q[3] : [INPUT] I3
+q[4] : [INPUT] I4
+q[5] : [INPUT] I5
+q[6] : [OUTPUT] O5
+q[7] : [OUTPUT] O6
+q[8] : [ANCILLA] LUT6_2:CONST0
+q[9] : [ANCILLA] LUT6_2:CONST1
+q[10] : [ANCILLA] LUT6_2:O6:node5:I0
+q[11] : [ANCILLA] LUT6_2:O6:node4:I1
+q[12] : [ANCILLA] LUT6_2:O6:node3:I2
+q[13] : [ANCILLA] LUT6_2:O6:node2:I3
+q[14] : [ANCILLA] LUT6_2:O6:node1:I4
+q[15] : [ANCILLA] LUT6_2:O5:node4:I0
+q[16] : [ANCILLA] LUT6_2:O5:node3:I1
+q[17] : [ANCILLA] LUT6_2:O5:node2:I2
+q[18] : [ANCILLA] LUT6_2:O5:node1:I3
+
+[4] Primitive Truth Table
+I0 | I1 | I2 | I3 | I4 | I5 | O5 | O6
+---+----+----+----+----+----+----+---
+0  | 0  | 0  | 0  | 0  | 0  | 0  | 0 
+0  | 0  | 0  | 0  | 0  | 1  | 0  | 0 
+0  | 0  | 0  | 0  | 1  | 0  | 0  | 0 
+0  | 0  | 0  | 0  | 1  | 1  | 0  | 0 
+0  | 0  | 0  | 1  | 0  | 0  | 0  | 0 
+0  | 0  | 0  | 1  | 0  | 1  | 0  | 0 
+0  | 0  | 0  | 1  | 1  | 0  | 0  | 0 
+0  | 0  | 0  | 1  | 1  | 1  | 0  | 0 
+0  | 0  | 1  | 0  | 0  | 0  | 0  | 0 
+0  | 0  | 1  | 0  | 0  | 1  | 0  | 0 
+0  | 0  | 1  | 0  | 1  | 0  | 0  | 0 
+0  | 0  | 1  | 0  | 1  | 1  | 0  | 0 
+0  | 0  | 1  | 1  | 0  | 0  | 0  | 0 
+0  | 0  | 1  | 1  | 0  | 1  | 0  | 0 
+0  | 0  | 1  | 1  | 1  | 0  | 0  | 0 
+0  | 0  | 1  | 1  | 1  | 1  | 0  | 0 
+0  | 1  | 0  | 0  | 0  | 0  | 0  | 0 
+0  | 1  | 0  | 0  | 0  | 1  | 0  | 0 
+0  | 1  | 0  | 0  | 1  | 0  | 0  | 0 
+0  | 1  | 0  | 0  | 1  | 1  | 0  | 0 
+0  | 1  | 0  | 1  | 0  | 0  | 0  | 0 
+0  | 1  | 0  | 1  | 0  | 1  | 0  | 0 
+0  | 1  | 0  | 1  | 1  | 0  | 0  | 0 
+0  | 1  | 0  | 1  | 1  | 1  | 0  | 0 
+0  | 1  | 1  | 0  | 0  | 0  | 0  | 0 
+0  | 1  | 1  | 0  | 0  | 1  | 0  | 0 
+0  | 1  | 1  | 0  | 1  | 0  | 0  | 0 
+0  | 1  | 1  | 0  | 1  | 1  | 0  | 0 
+0  | 1  | 1  | 1  | 0  | 0  | 0  | 0 
+0  | 1  | 1  | 1  | 0  | 1  | 0  | 0 
+0  | 1  | 1  | 1  | 1  | 0  | 0  | 0 
+0  | 1  | 1  | 1  | 1  | 1  | 0  | 0 
+1  | 0  | 0  | 0  | 0  | 0  | 0  | 0 
+1  | 0  | 0  | 0  | 0  | 1  | 0  | 0 
+1  | 0  | 0  | 0  | 1  | 0  | 0  | 0 
+1  | 0  | 0  | 0  | 1  | 1  | 0  | 0 
+1  | 0  | 0  | 1  | 0  | 0  | 0  | 0 
+1  | 0  | 0  | 1  | 0  | 1  | 0  | 0 
+1  | 0  | 0  | 1  | 1  | 0  | 0  | 0 
+1  | 0  | 0  | 1  | 1  | 1  | 0  | 0 
+1  | 0  | 1  | 0  | 0  | 0  | 0  | 0 
+1  | 0  | 1  | 0  | 0  | 1  | 0  | 0 
+1  | 0  | 1  | 0  | 1  | 0  | 0  | 0 
+1  | 0  | 1  | 0  | 1  | 1  | 0  | 0 
+1  | 0  | 1  | 1  | 0  | 0  | 0  | 0 
+1  | 0  | 1  | 1  | 0  | 1  | 0  | 0 
+1  | 0  | 1  | 1  | 1  | 0  | 0  | 0 
+1  | 0  | 1  | 1  | 1  | 1  | 0  | 0 
+1  | 1  | 0  | 0  | 0  | 0  | 0  | 0 
+1  | 1  | 0  | 0  | 0  | 1  | 0  | 0 
+1  | 1  | 0  | 0  | 1  | 0  | 0  | 0 
+1  | 1  | 0  | 0  | 1  | 1  | 0  | 0 
+1  | 1  | 0  | 1  | 0  | 0  | 0  | 0 
+1  | 1  | 0  | 1  | 0  | 1  | 0  | 0 
+1  | 1  | 0  | 1  | 1  | 0  | 0  | 0 
+1  | 1  | 0  | 1  | 1  | 1  | 0  | 0 
+1  | 1  | 1  | 0  | 0  | 0  | 0  | 0 
+1  | 1  | 1  | 0  | 0  | 1  | 0  | 0 
+1  | 1  | 1  | 0  | 1  | 0  | 0  | 0 
+1  | 1  | 1  | 0  | 1  | 1  | 0  | 0 
+1  | 1  | 1  | 1  | 0  | 0  | 0  | 0 
+1  | 1  | 1  | 1  | 0  | 1  | 0  | 0 
+1  | 1  | 1  | 1  | 1  | 0  | 1  | 1 
+1  | 1  | 1  | 1  | 1  | 1  | 1  | 1 
+
+[6] Minimum Energy
+0
+
+[7] Parameters
+init = 0x8000000080000000 (9223372039002259456)
+
+[9] Verification Summary
+valid_visible_assignments = 64
+invalid_visible_assignments = 192
+all_valid_states_have_min_energy_0 = True
+all_invalid_states_have_min_energy_gt_0 = True
+verification_passed = True
+
+[10] Base Relation Synthesis Notes
+BUF: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+CONST0: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+CONST1: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+MUX2: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+NOT: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+OR2: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+XOR2: MILP-synthesized with ancilla_count=0, integer_scale=1/1, coefficient_bound=3
+

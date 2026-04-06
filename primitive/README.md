@@ -1,0 +1,114 @@
+# Primitive Ising Reports
+
+This directory contains Chapter 5 UG953 primitive wrappers and generated `.log` reports.
+
+Implemented primitives:
+- BUFG
+- BUFGCE
+- BUFGCE_1
+- BUFGMUX
+- BUFGMUX_1
+- BUFGMUX_CTRL
+- BUFH
+- BUFIO
+- BUFMR
+- CARRY4
+- IBUF
+- IBUFDS
+- IBUFDS_DIFF_OUT
+- LUT1
+- LUT2
+- LUT3
+- LUT4
+- LUT5
+- LUT6
+- LUT6_2
+- MUXF7
+- MUXF8
+- OBUF
+- OBUFDS
+- PULLDOWN
+- PULLUP
+
+Unsupported primitives in this pass:
+- BSCANE2: unsupported: device-configuration or silicon-service primitive rather than logic functionality
+- BUFGCTRL: unsupported: steady-state approximation is possible, but divider/hold/init semantics are not fully captured yet
+- BUFHCE: unsupported: steady-state approximation is possible, but divider/hold/init semantics are not fully captured yet
+- BUFMRCE: unsupported: steady-state approximation is possible, but divider/hold/init semantics are not fully captured yet
+- BUFR: unsupported: steady-state approximation is possible, but divider/hold/init semantics are not fully captured yet
+- CAPTUREE2: unsupported: device-configuration or silicon-service primitive rather than logic functionality
+- CFGLUT5: unsupported: not yet decomposed into a stable cubic binary model in this pass
+- DCIRESET: unsupported: device-configuration or silicon-service primitive rather than logic functionality
+- DNA_PORT: unsupported: device-configuration or silicon-service primitive rather than logic functionality
+- DSP48E1: unsupported: not yet decomposed into a stable cubic binary model in this pass
+- EFUSE_USR: unsupported: device-configuration or silicon-service primitive rather than logic functionality
+- FDCE: unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation
+- FDPE: unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation
+- FDRE: unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation
+- FDSE: unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation
+- FIFO18E1: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- FIFO36E1: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- FRAME_ECCE2: unsupported: device-configuration or silicon-service primitive rather than logic functionality
+- IBUF_IBUFDISABLE: unsupported: contains disable/'No Change' semantics that need explicit state retention variables
+- IBUF_INTERMDISABLE: unsupported: contains disable/'No Change' semantics that need explicit state retention variables
+- IBUFDS_DIFF_OUT_IBUFDISABLE: unsupported: contains disable/'No Change' semantics that need explicit state retention variables
+- IBUFDS_DIFF_OUT_INTERMDISABLE: unsupported: contains disable/'No Change' semantics that need explicit state retention variables
+- IBUFDS_GTE2: unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation
+- IBUFDS_IBUFDISABLE: unsupported: contains disable/'No Change' semantics that need explicit state retention variables
+- IBUFDS_INTERMDISABLE: unsupported: contains disable/'No Change' semantics that need explicit state retention variables
+- ICAPE2: unsupported: device-configuration or silicon-service primitive rather than logic functionality
+- IDDR: unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation
+- IDDR_2CLK: unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation
+- IDELAYCTRL: unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation
+- IDELAYE2: unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation
+- IN_FIFO: unsupported: serialized/clocked data movement primitive, not a static combinational relation
+- IOBUF: unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits
+- IOBUF_DCIEN: unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits
+- IOBUF_INTERMDISABLE: unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits
+- IOBUFDS: unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits
+- IOBUFDS_DCIEN: unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits
+- IOBUFDS_DIFF_OUT: unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits
+- IOBUFDS_DIFF_OUT_DCIEN: unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits
+- IOBUFDS_DIFF_OUT_INTERMDISABLE: unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits
+- IOBUFDS_INTERMDISABLE: unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits
+- ISERDESE2: unsupported: serialized/clocked data movement primitive, not a static combinational relation
+- KEEPER: unsupported: not yet decomposed into a stable cubic binary model in this pass
+- LDCE: unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation
+- LDPE: unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation
+- MMCME2_ADV: unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation
+- MMCME2_BASE: unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation
+- OBUFT: unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits
+- OBUFTDS: unsupported: requires a third electrical state (Z/high-impedance), which is outside binary Ising qubits
+- ODDR: unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation
+- ODELAYE2: unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation
+- OSERDESE2: unsupported: serialized/clocked data movement primitive, not a static combinational relation
+- OUT_FIFO: unsupported: serialized/clocked data movement primitive, not a static combinational relation
+- PLLE2_ADV: unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation
+- PLLE2_BASE: unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation
+- RAM128X1D: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- RAM128X1S: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- RAM256X1S: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- RAM32M: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- RAM32X1D: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- RAM32X1S: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- RAM32X1S_1: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- RAM32X2S: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- RAM64M: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- RAM64X1D: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- RAM64X1S: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- RAM64X1S_1: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- RAMB18E1: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- RAMB36E1: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- ROM128X1: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- ROM256X1: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- ROM32X1: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- ROM64X1: unsupported: memory primitive would need explicit stored-state/address modeling beyond this static flow
+- SRL16E: unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation
+- SRLC32E: unsupported: requires temporal state/current-vs-next-state modeling rather than a static input-output relation
+- STARTUPE2: unsupported: device-configuration or silicon-service primitive rather than logic functionality
+- USR_ACCESSE2: unsupported: device-configuration or silicon-service primitive rather than logic functionality
+- XADC: unsupported: analog, delay, or clock-management behavior is not representable as a static binary Ising relation
+
+LUT notes:
+- `LUT1`..`LUT6` scripts accept `--init`.
+- `LUT6_2` also uses `--init`; the default value realizes O5=AND5 and O6=AND6.
