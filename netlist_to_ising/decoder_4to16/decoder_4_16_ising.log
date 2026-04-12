@@ -1,0 +1,319 @@
+========================================================================================
+ NETLIST TO ISING REPORT (decoder_4to16)
+========================================================================================
+Source Netlist: E:\zcling\ising_project\netlist_to_ising\decoder_4to16\decoder_4_16.v
+Primitive Instance Count: 37
+Total Qubits: 58
+Total Minimum Energy: 0
+Minimum Energy Mode: inferred_from_primitive_normalization
+Integer Scale Applied: 2
+----------------------------------------------------------------------------------------
+
+[1. CUBIC TERMS LIST (With Coefficients)]
+cubic_terms_list = [
+    '5*q[1]*q[3]*q[5]',
+    '3*q[1]*q[3]*q[7]',
+    'q[1]*q[3]*q[12]',
+    '-2*q[1]*q[3]*q[17]',
+    '-q[1]*q[3]*q[20]',
+    'q[1]*q[3]*q[21]',
+    '2*q[1]*q[3]*q[30]',
+    '2*q[1]*q[3]*q[33]',
+    '2*q[1]*q[3]*q[41]',
+    '-q[1]*q[3]*q[44]',
+    '-q[1]*q[3]*q[47]',
+    '-2*q[1]*q[3]*q[50]',
+    '2*q[1]*q[3]*q[53]',
+    'q[1]*q[3]*q[54]',
+    '12*q[1]*q[5]*q[7]',
+    '-q[1]*q[5]*q[8]',
+    '-q[1]*q[5]*q[10]',
+    '-q[1]*q[5]*q[14]',
+    'q[1]*q[5]*q[15]',
+    '-q[1]*q[5]*q[20]',
+    '-2*q[1]*q[5]*q[23]',
+    'q[1]*q[5]*q[24]',
+    '-2*q[1]*q[5]*q[27]',
+    '2*q[1]*q[5]*q[32]',
+    '2*q[1]*q[5]*q[35]',
+    '-q[1]*q[5]*q[38]',
+    '2*q[1]*q[5]*q[41]',
+    'q[1]*q[5]*q[45]',
+    '2*q[1]*q[5]*q[47]',
+    '-4*q[1]*q[5]*q[51]',
+    '-q[1]*q[5]*q[56]',
+    '-q[1]*q[7]*q[8]',
+    'q[1]*q[7]*q[10]',
+    '-q[1]*q[7]*q[11]',
+    'q[1]*q[7]*q[12]',
+    'q[1]*q[7]*q[18]',
+    '2*q[1]*q[7]*q[20]',
+    'q[1]*q[7]*q[24]',
+    '-q[1]*q[7]*q[26]',
+    '-2*q[1]*q[7]*q[29]',
+    '2*q[1]*q[7]*q[30]',
+    '2*q[1]*q[7]*q[32]',
+    '2*q[1]*q[7]*q[35]',
+    'q[1]*q[7]*q[36]',
+    '-4*q[1]*q[7]*q[39]',
+    'q[1]*q[7]*q[42]',
+    '-q[1]*q[7]*q[47]',
+    'q[1]*q[7]*q[48]',
+    '2*q[1]*q[7]*q[51]',
+    '2*q[1]*q[7]*q[53]',
+    '2*q[1]*q[8]*q[10]',
+    'q[1]*q[10]*q[12]',
+    '-q[1]*q[10]*q[15]',
+    '-2*q[1]*q[10]*q[17]',
+    'q[1]*q[10]*q[18]',
+    '-q[1]*q[10]*q[21]',
+    '-2*q[1]*q[10]*q[23]',
+    '-4*q[1]*q[10]*q[35]',
+    'q[1]*q[10]*q[38]',
+    '-2*q[1]*q[10]*q[41]',
+    'q[1]*q[10]*q[44]',
+    'q[1]*q[10]*q[45]',
+    '-q[1]*q[10]*q[48]',
+    '-2*q[1]*q[10]*q[50]',
+    'q[1]*q[10]*q[56]',
+    '-q[1]*q[18]*q[20]',
+    '2*q[1]*q[27]*q[29]',
+    '-2*q[1]*q[39]*q[41]',
+    '-q[1]*q[45]*q[47]',
+    '-2*q[1]*q[51]*q[53]',
+    '8*q[3]*q[5]*q[7]',
+    '-q[3]*q[5]*q[8]',
+    '-q[3]*q[5]*q[10]',
+    'q[3]*q[5]*q[11]',
+    '-q[3]*q[5]*q[14]',
+    'q[3]*q[5]*q[18]',
+    '-2*q[3]*q[5]*q[26]',
+    '2*q[3]*q[5]*q[29]',
+    '2*q[3]*q[5]*q[32]',
+    '2*q[3]*q[5]*q[35]',
+    'q[3]*q[5]*q[36]',
+    '2*q[3]*q[5]*q[38]',
+    '2*q[3]*q[5]*q[39]',
+    'q[3]*q[5]*q[42]',
+    '2*q[3]*q[5]*q[44]',
+    '-q[3]*q[5]*q[48]',
+    '2*q[3]*q[5]*q[53]',
+    '-q[3]*q[5]*q[56]',
+    '-q[3]*q[7]*q[8]',
+    '-q[3]*q[7]*q[15]',
+    'q[3]*q[7]*q[18]',
+    'q[3]*q[7]*q[21]',
+    '-q[3]*q[7]*q[23]',
+    '-q[3]*q[7]*q[24]',
+    '-4*q[3]*q[7]*q[27]',
+    '-2*q[3]*q[7]*q[29]',
+    '2*q[3]*q[7]*q[32]',
+    '2*q[3]*q[7]*q[33]',
+    '2*q[3]*q[7]*q[35]',
+    'q[3]*q[7]*q[36]',
+    '2*q[3]*q[7]*q[41]',
+    '-q[3]*q[7]*q[44]',
+    'q[3]*q[7]*q[45]',
+    '2*q[3]*q[7]*q[51]',
+    'q[3]*q[7]*q[54]',
+    'q[3]*q[8]*q[11]',
+    'q[3]*q[10]*q[14]',
+    '-q[3]*q[10]*q[15]',
+    'q[3]*q[10]*q[17]',
+    'q[3]*q[10]*q[18]',
+    '-q[3]*q[10]*q[24]',
+    'q[3]*q[10]*q[26]',
+    '-2*q[3]*q[10]*q[27]',
+    '-4*q[3]*q[10]*q[32]',
+    '-4*q[3]*q[10]*q[41]',
+    'q[3]*q[10]*q[42]',
+    'q[3]*q[10]*q[47]',
+    '-q[3]*q[10]*q[48]',
+    'q[3]*q[10]*q[50]',
+    '-4*q[3]*q[10]*q[53]',
+    'q[3]*q[10]*q[54]',
+    'q[3]*q[15]*q[17]',
+    'q[3]*q[24]*q[26]',
+    '-2*q[3]*q[27]*q[29]',
+    'q[3]*q[36]*q[38]',
+    '-q[3]*q[42]*q[44]',
+    'q[3]*q[48]*q[50]',
+    'q[5]*q[7]*q[12]',
+    '2*q[5]*q[7]*q[14]',
+    'q[5]*q[7]*q[15]',
+    '-q[5]*q[7]*q[17]',
+    '-q[5]*q[7]*q[21]',
+    '-4*q[5]*q[7]*q[30]',
+    '-4*q[5]*q[7]*q[33]',
+    '-q[5]*q[7]*q[38]',
+    '2*q[5]*q[7]*q[39]',
+    '2*q[5]*q[7]*q[41]',
+    'q[5]*q[7]*q[42]',
+    'q[5]*q[7]*q[45]',
+    'q[5]*q[7]*q[48]',
+    '-q[5]*q[7]*q[50]',
+    '2*q[5]*q[7]*q[53]',
+    'q[5]*q[7]*q[54]',
+    '2*q[5]*q[7]*q[56]',
+    'q[5]*q[10]*q[12]',
+    'q[5]*q[10]*q[20]',
+    '-q[5]*q[10]*q[21]',
+    'q[5]*q[10]*q[23]',
+    '-q[5]*q[10]*q[24]',
+    '-2*q[5]*q[10]*q[26]',
+    '-2*q[5]*q[10]*q[27]',
+    '2*q[5]*q[10]*q[29]',
+    '-2*q[5]*q[10]*q[32]',
+    '-2*q[5]*q[10]*q[35]',
+    'q[5]*q[10]*q[36]',
+    '-2*q[5]*q[10]*q[53]',
+    'q[5]*q[10]*q[54]',
+    '-q[5]*q[12]*q[14]',
+    'q[5]*q[21]*q[23]',
+    '-2*q[5]*q[30]*q[32]',
+    '-2*q[5]*q[33]*q[35]',
+    '-q[5]*q[36]*q[38]',
+    'q[5]*q[42]*q[44]',
+    'q[5]*q[45]*q[47]',
+    '-q[5]*q[48]*q[50]',
+    '-2*q[5]*q[51]*q[53]',
+    '-q[5]*q[54]*q[56]',
+    '-q[7]*q[8]*q[11]',
+    'q[7]*q[10]*q[11]',
+    'q[7]*q[10]*q[36]',
+    'q[7]*q[10]*q[42]',
+    'q[7]*q[10]*q[45]',
+    'q[7]*q[12]*q[14]',
+    '-q[7]*q[15]*q[17]',
+    'q[7]*q[18]*q[20]',
+    '-q[7]*q[21]*q[23]',
+    '-q[7]*q[24]*q[26]',
+    '2*q[7]*q[27]*q[29]',
+    '-2*q[7]*q[30]*q[32]',
+    '-2*q[7]*q[33]*q[35]',
+    '-2*q[7]*q[39]*q[41]',
+    'q[7]*q[54]*q[56]',
+    '-q[10]*q[12]*q[14]',
+    'q[10]*q[15]*q[17]',
+    '-q[10]*q[18]*q[20]',
+    'q[10]*q[21]*q[23]',
+    'q[10]*q[24]*q[26]',
+    '-q[10]*q[36]*q[38]',
+    '-q[10]*q[42]*q[44]',
+    '-q[10]*q[45]*q[47]',
+    'q[10]*q[48]*q[50]',
+    '-q[10]*q[54]*q[56]',
+]
+
+----------------------------------------------------------------------------------------
+[2. F_QUADRATIC (Linear + Quadratic terms only)]
+209 - 8*q[1] - 16*q[3] - 8*q[5] + 7*q[7] + 5*q[8] + q[10] + q[11] + 5*q[12] + 2*q[14] + 5*q[15] + 2*q[17] + 5*q[18] + 2*q[20] + 5*q[21] + 2*q[23] + 5*q[24] + 2*q[26] + 10*q[27] - 2*q[29] + 8*q[30] + 4*q[32] + 8*q[33] + 4*q[35] + 5*q[36] + 2*q[38] + 8*q[39] + 4*q[41] + 5*q[42] + 2*q[44] + 5*q[45] + 2*q[47] + 5*q[48] + 2*q[50] + 8*q[51] + 4*q[53] + 5*q[54] + 2*q[56] - 2*q[0]*q[1] + 6*q[1]*q[3] + 8*q[1]*q[7] - q[1]*q[10] + q[1]*q[11] + q[1]*q[14] - 2*q[1]*q[15] - q[1]*q[20] - 2*q[1]*q[21] - q[1]*q[26] - 2*q[1]*q[27] - 2*q[1]*q[30] - 2*q[1]*q[33] - q[1]*q[36] + 2*q[1]*q[38] + 4*q[1]*q[41] - q[1]*q[42] + 2*q[1]*q[44] - q[1]*q[47] - 2*q[1]*q[48] + 2*q[1]*q[51] + 2*q[1]*q[53] - q[1]*q[54] + 2*q[1]*q[56] - 2*q[2]*q[3] + 6*q[3]*q[5] - q[3]*q[7] + q[3]*q[8] + 2*q[3]*q[10] - q[3]*q[12] + 2*q[3]*q[14] - q[3]*q[15] + q[3]*q[20] - q[3]*q[23] - q[3]*q[24] - 2*q[3]*q[27] + 2*q[3]*q[29] - 2*q[3]*q[30] - 2*q[3]*q[33] - q[3]*q[38] - 2*q[3]*q[39] - q[3]*q[44] - q[3]*q[45] + 2*q[3]*q[47] - q[3]*q[48] - 2*q[3]*q[51] + q[3]*q[56] - 2*q[4]*q[5] + 2*q[5]*q[7] + q[5]*q[8] + q[5]*q[10] - q[5]*q[11] - q[5]*q[14] - q[5]*q[17] - q[5]*q[18] + 2*q[5]*q[20] - q[5]*q[21] - 2*q[5]*q[24] - 2*q[5]*q[27] + 4*q[5]*q[32] + 4*q[5]*q[35] - q[5]*q[38] - 2*q[5]*q[39] - q[5]*q[44] - q[5]*q[47] + 4*q[5]*q[53] - q[5]*q[56] - 2*q[6]*q[7] + 3*q[7]*q[10] - q[7]*q[11] - q[7]*q[14] - q[7]*q[20] + 2*q[7]*q[29] + 2*q[7]*q[30] + 2*q[7]*q[32] + 2*q[7]*q[33] + 2*q[7]*q[35] + q[7]*q[38] + 2*q[7]*q[39] + 2*q[7]*q[41] + q[7]*q[44] + q[7]*q[47] - q[7]*q[50] - 2*q[7]*q[51] - q[7]*q[56] - 2*q[8]*q[9] - q[8]*q[10] - q[10]*q[11] - q[10]*q[12] - q[10]*q[18] + 2*q[10]*q[27] + 2*q[10]*q[29] + 2*q[10]*q[32] + 2*q[10]*q[35] - q[10]*q[36] + 2*q[10]*q[41] - q[10]*q[42] - q[10]*q[45] + 2*q[10]*q[53] - q[10]*q[54] - 2*q[10]*q[57] - 2*q[12]*q[13] + q[12]*q[14] - 2*q[15]*q[16] - 2*q[18]*q[19] + q[18]*q[20] - 2*q[21]*q[22] - 2*q[24]*q[25] - 2*q[27]*q[28] + 2*q[27]*q[29] - 2*q[30]*q[31] + 2*q[30]*q[32] - 2*q[33]*q[34] + 2*q[33]*q[35] - 2*q[36]*q[37] + q[36]*q[38] - 2*q[39]*q[40] + 2*q[39]*q[41] - 2*q[42]*q[43] + q[42]*q[44] - 2*q[45]*q[46] + q[45]*q[47] - 2*q[48]*q[49] - 2*q[51]*q[52] + 2*q[51]*q[53] - 2*q[54]*q[55] + q[54]*q[56]
+
+----------------------------------------------------------------------------------------
+[3. F_TOTAL (Full Hamiltonian including Cubic)]
+209 - 8*q[1] - 16*q[3] - 8*q[5] + 7*q[7] + 5*q[8] + q[10] + q[11] + 5*q[12] + 2*q[14] + 5*q[15] + 2*q[17] + 5*q[18] + 2*q[20] + 5*q[21] + 2*q[23] + 5*q[24] + 2*q[26] + 10*q[27] - 2*q[29] + 8*q[30] + 4*q[32] + 8*q[33] + 4*q[35] + 5*q[36] + 2*q[38] + 8*q[39] + 4*q[41] + 5*q[42] + 2*q[44] + 5*q[45] + 2*q[47] + 5*q[48] + 2*q[50] + 8*q[51] + 4*q[53] + 5*q[54] + 2*q[56] - 2*q[0]*q[1] + 6*q[1]*q[3] + 8*q[1]*q[7] - q[1]*q[10] + q[1]*q[11] + q[1]*q[14] - 2*q[1]*q[15] - q[1]*q[20] - 2*q[1]*q[21] - q[1]*q[26] - 2*q[1]*q[27] - 2*q[1]*q[30] - 2*q[1]*q[33] - q[1]*q[36] + 2*q[1]*q[38] + 4*q[1]*q[41] - q[1]*q[42] + 2*q[1]*q[44] - q[1]*q[47] - 2*q[1]*q[48] + 2*q[1]*q[51] + 2*q[1]*q[53] - q[1]*q[54] + 2*q[1]*q[56] - 2*q[2]*q[3] + 6*q[3]*q[5] - q[3]*q[7] + q[3]*q[8] + 2*q[3]*q[10] - q[3]*q[12] + 2*q[3]*q[14] - q[3]*q[15] + q[3]*q[20] - q[3]*q[23] - q[3]*q[24] - 2*q[3]*q[27] + 2*q[3]*q[29] - 2*q[3]*q[30] - 2*q[3]*q[33] - q[3]*q[38] - 2*q[3]*q[39] - q[3]*q[44] - q[3]*q[45] + 2*q[3]*q[47] - q[3]*q[48] - 2*q[3]*q[51] + q[3]*q[56] - 2*q[4]*q[5] + 2*q[5]*q[7] + q[5]*q[8] + q[5]*q[10] - q[5]*q[11] - q[5]*q[14] - q[5]*q[17] - q[5]*q[18] + 2*q[5]*q[20] - q[5]*q[21] - 2*q[5]*q[24] - 2*q[5]*q[27] + 4*q[5]*q[32] + 4*q[5]*q[35] - q[5]*q[38] - 2*q[5]*q[39] - q[5]*q[44] - q[5]*q[47] + 4*q[5]*q[53] - q[5]*q[56] - 2*q[6]*q[7] + 3*q[7]*q[10] - q[7]*q[11] - q[7]*q[14] - q[7]*q[20] + 2*q[7]*q[29] + 2*q[7]*q[30] + 2*q[7]*q[32] + 2*q[7]*q[33] + 2*q[7]*q[35] + q[7]*q[38] + 2*q[7]*q[39] + 2*q[7]*q[41] + q[7]*q[44] + q[7]*q[47] - q[7]*q[50] - 2*q[7]*q[51] - q[7]*q[56] - 2*q[8]*q[9] - q[8]*q[10] - q[10]*q[11] - q[10]*q[12] - q[10]*q[18] + 2*q[10]*q[27] + 2*q[10]*q[29] + 2*q[10]*q[32] + 2*q[10]*q[35] - q[10]*q[36] + 2*q[10]*q[41] - q[10]*q[42] - q[10]*q[45] + 2*q[10]*q[53] - q[10]*q[54] - 2*q[10]*q[57] - 2*q[12]*q[13] + q[12]*q[14] - 2*q[15]*q[16] - 2*q[18]*q[19] + q[18]*q[20] - 2*q[21]*q[22] - 2*q[24]*q[25] - 2*q[27]*q[28] + 2*q[27]*q[29] - 2*q[30]*q[31] + 2*q[30]*q[32] - 2*q[33]*q[34] + 2*q[33]*q[35] - 2*q[36]*q[37] + q[36]*q[38] - 2*q[39]*q[40] + 2*q[39]*q[41] - 2*q[42]*q[43] + q[42]*q[44] - 2*q[45]*q[46] + q[45]*q[47] - 2*q[48]*q[49] - 2*q[51]*q[52] + 2*q[51]*q[53] - 2*q[54]*q[55] + q[54]*q[56] + 5*q[1]*q[3]*q[5] + 3*q[1]*q[3]*q[7] + q[1]*q[3]*q[12] - 2*q[1]*q[3]*q[17] - q[1]*q[3]*q[20] + q[1]*q[3]*q[21] + 2*q[1]*q[3]*q[30] + 2*q[1]*q[3]*q[33] + 2*q[1]*q[3]*q[41] - q[1]*q[3]*q[44] - q[1]*q[3]*q[47] - 2*q[1]*q[3]*q[50] + 2*q[1]*q[3]*q[53] + q[1]*q[3]*q[54] + 12*q[1]*q[5]*q[7] - q[1]*q[5]*q[8] - q[1]*q[5]*q[10] - q[1]*q[5]*q[14] + q[1]*q[5]*q[15] - q[1]*q[5]*q[20] - 2*q[1]*q[5]*q[23] + q[1]*q[5]*q[24] - 2*q[1]*q[5]*q[27] + 2*q[1]*q[5]*q[32] + 2*q[1]*q[5]*q[35] - q[1]*q[5]*q[38] + 2*q[1]*q[5]*q[41] + q[1]*q[5]*q[45] + 2*q[1]*q[5]*q[47] - 4*q[1]*q[5]*q[51] - q[1]*q[5]*q[56] - q[1]*q[7]*q[8] + q[1]*q[7]*q[10] - q[1]*q[7]*q[11] + q[1]*q[7]*q[12] + q[1]*q[7]*q[18] + 2*q[1]*q[7]*q[20] + q[1]*q[7]*q[24] - q[1]*q[7]*q[26] - 2*q[1]*q[7]*q[29] + 2*q[1]*q[7]*q[30] + 2*q[1]*q[7]*q[32] + 2*q[1]*q[7]*q[35] + q[1]*q[7]*q[36] - 4*q[1]*q[7]*q[39] + q[1]*q[7]*q[42] - q[1]*q[7]*q[47] + q[1]*q[7]*q[48] + 2*q[1]*q[7]*q[51] + 2*q[1]*q[7]*q[53] + 2*q[1]*q[8]*q[10] + q[1]*q[10]*q[12] - q[1]*q[10]*q[15] - 2*q[1]*q[10]*q[17] + q[1]*q[10]*q[18] - q[1]*q[10]*q[21] - 2*q[1]*q[10]*q[23] - 4*q[1]*q[10]*q[35] + q[1]*q[10]*q[38] - 2*q[1]*q[10]*q[41] + q[1]*q[10]*q[44] + q[1]*q[10]*q[45] - q[1]*q[10]*q[48] - 2*q[1]*q[10]*q[50] + q[1]*q[10]*q[56] - q[1]*q[18]*q[20] + 2*q[1]*q[27]*q[29] - 2*q[1]*q[39]*q[41] - q[1]*q[45]*q[47] - 2*q[1]*q[51]*q[53] + 8*q[3]*q[5]*q[7] - q[3]*q[5]*q[8] - q[3]*q[5]*q[10] + q[3]*q[5]*q[11] - q[3]*q[5]*q[14] + q[3]*q[5]*q[18] - 2*q[3]*q[5]*q[26] + 2*q[3]*q[5]*q[29] + 2*q[3]*q[5]*q[32] + 2*q[3]*q[5]*q[35] + q[3]*q[5]*q[36] + 2*q[3]*q[5]*q[38] + 2*q[3]*q[5]*q[39] + q[3]*q[5]*q[42] + 2*q[3]*q[5]*q[44] - q[3]*q[5]*q[48] + 2*q[3]*q[5]*q[53] - q[3]*q[5]*q[56] - q[3]*q[7]*q[8] - q[3]*q[7]*q[15] + q[3]*q[7]*q[18] + q[3]*q[7]*q[21] - q[3]*q[7]*q[23] - q[3]*q[7]*q[24] - 4*q[3]*q[7]*q[27] - 2*q[3]*q[7]*q[29] + 2*q[3]*q[7]*q[32] + 2*q[3]*q[7]*q[33] + 2*q[3]*q[7]*q[35] + q[3]*q[7]*q[36] + 2*q[3]*q[7]*q[41] - q[3]*q[7]*q[44] + q[3]*q[7]*q[45] + 2*q[3]*q[7]*q[51] + q[3]*q[7]*q[54] + q[3]*q[8]*q[11] + q[3]*q[10]*q[14] - q[3]*q[10]*q[15] + q[3]*q[10]*q[17] + q[3]*q[10]*q[18] - q[3]*q[10]*q[24] + q[3]*q[10]*q[26] - 2*q[3]*q[10]*q[27] - 4*q[3]*q[10]*q[32] - 4*q[3]*q[10]*q[41] + q[3]*q[10]*q[42] + q[3]*q[10]*q[47] - q[3]*q[10]*q[48] + q[3]*q[10]*q[50] - 4*q[3]*q[10]*q[53] + q[3]*q[10]*q[54] + q[3]*q[15]*q[17] + q[3]*q[24]*q[26] - 2*q[3]*q[27]*q[29] + q[3]*q[36]*q[38] - q[3]*q[42]*q[44] + q[3]*q[48]*q[50] + q[5]*q[7]*q[12] + 2*q[5]*q[7]*q[14] + q[5]*q[7]*q[15] - q[5]*q[7]*q[17] - q[5]*q[7]*q[21] - 4*q[5]*q[7]*q[30] - 4*q[5]*q[7]*q[33] - q[5]*q[7]*q[38] + 2*q[5]*q[7]*q[39] + 2*q[5]*q[7]*q[41] + q[5]*q[7]*q[42] + q[5]*q[7]*q[45] + q[5]*q[7]*q[48] - q[5]*q[7]*q[50] + 2*q[5]*q[7]*q[53] + q[5]*q[7]*q[54] + 2*q[5]*q[7]*q[56] + q[5]*q[10]*q[12] + q[5]*q[10]*q[20] - q[5]*q[10]*q[21] + q[5]*q[10]*q[23] - q[5]*q[10]*q[24] - 2*q[5]*q[10]*q[26] - 2*q[5]*q[10]*q[27] + 2*q[5]*q[10]*q[29] - 2*q[5]*q[10]*q[32] - 2*q[5]*q[10]*q[35] + q[5]*q[10]*q[36] - 2*q[5]*q[10]*q[53] + q[5]*q[10]*q[54] - q[5]*q[12]*q[14] + q[5]*q[21]*q[23] - 2*q[5]*q[30]*q[32] - 2*q[5]*q[33]*q[35] - q[5]*q[36]*q[38] + q[5]*q[42]*q[44] + q[5]*q[45]*q[47] - q[5]*q[48]*q[50] - 2*q[5]*q[51]*q[53] - q[5]*q[54]*q[56] - q[7]*q[8]*q[11] + q[7]*q[10]*q[11] + q[7]*q[10]*q[36] + q[7]*q[10]*q[42] + q[7]*q[10]*q[45] + q[7]*q[12]*q[14] - q[7]*q[15]*q[17] + q[7]*q[18]*q[20] - q[7]*q[21]*q[23] - q[7]*q[24]*q[26] + 2*q[7]*q[27]*q[29] - 2*q[7]*q[30]*q[32] - 2*q[7]*q[33]*q[35] - 2*q[7]*q[39]*q[41] + q[7]*q[54]*q[56] - q[10]*q[12]*q[14] + q[10]*q[15]*q[17] - q[10]*q[18]*q[20] + q[10]*q[21]*q[23] + q[10]*q[24]*q[26] - q[10]*q[36]*q[38] - q[10]*q[42]*q[44] - q[10]*q[45]*q[47] + q[10]*q[48]*q[50] - q[10]*q[54]*q[56]
+
+----------------------------------------------------------------------------------------
+[4. FULL VARIABLE MAPPING]
+Index      | Description
+------------------------------------------------------------------------
+q[0]       : [INPUT] addr[0] | connections: addr_IBUF[0]_inst.I
+q[1]       : [WIRE] addr_IBUF[0] | connections: addr_IBUF[0]_inst.O, decode_out_OBUF[0]_inst_i_1.I2, decode_out_OBUF[10]_inst_i_1.I3, decode_out_OBUF[11]_inst_i_1.I2, decode_out_OBUF[12]_inst_i_1.I1, decode_out_OBUF[13]_inst_i_1.I2, decode_out_OBUF[14]_inst_i_1.I0, decode_out_OBUF[15]_inst_i_1.I2, decode_out_OBUF[1]_inst_i_1.I0, decode_out_OBUF[2]_inst_i_1.I2, decode_out_OBUF[3]_inst_i_1.I0, decode_out_OBUF[4]_inst_i_1.I1, decode_out_OBUF[5]_inst_i_1.I0, decode_out_OBUF[6]_inst_i_1.I1, decode_out_OBUF[7]_inst_i_1.I2, decode_out_OBUF[8]_inst_i_1.I3, decode_out_OBUF[9]_inst_i_1.I0
+q[2]       : [INPUT] addr[1] | connections: addr_IBUF[1]_inst.I
+q[3]       : [WIRE] addr_IBUF[1] | connections: addr_IBUF[1]_inst.O, decode_out_OBUF[0]_inst_i_1.I1, decode_out_OBUF[10]_inst_i_1.I0, decode_out_OBUF[11]_inst_i_1.I1, decode_out_OBUF[12]_inst_i_1.I3, decode_out_OBUF[13]_inst_i_1.I0, decode_out_OBUF[14]_inst_i_1.I1, decode_out_OBUF[15]_inst_i_1.I1, decode_out_OBUF[1]_inst_i_1.I2, decode_out_OBUF[2]_inst_i_1.I0, decode_out_OBUF[3]_inst_i_1.I2, decode_out_OBUF[4]_inst_i_1.I2, decode_out_OBUF[5]_inst_i_1.I1, decode_out_OBUF[6]_inst_i_1.I0, decode_out_OBUF[7]_inst_i_1.I1, decode_out_OBUF[8]_inst_i_1.I2, decode_out_OBUF[9]_inst_i_1.I3
+q[4]       : [INPUT] addr[2] | connections: addr_IBUF[2]_inst.I
+q[5]       : [WIRE] addr_IBUF[2] | connections: addr_IBUF[2]_inst.O, decode_out_OBUF[0]_inst_i_1.I3, decode_out_OBUF[10]_inst_i_1.I1, decode_out_OBUF[11]_inst_i_1.I0, decode_out_OBUF[12]_inst_i_1.I0, decode_out_OBUF[13]_inst_i_1.I1, decode_out_OBUF[14]_inst_i_1.I2, decode_out_OBUF[15]_inst_i_1.I4, decode_out_OBUF[1]_inst_i_1.I1, decode_out_OBUF[2]_inst_i_1.I1, decode_out_OBUF[3]_inst_i_1.I1, decode_out_OBUF[4]_inst_i_1.I0, decode_out_OBUF[5]_inst_i_1.I2, decode_out_OBUF[6]_inst_i_1.I2, decode_out_OBUF[7]_inst_i_1.I4, decode_out_OBUF[8]_inst_i_1.I1, decode_out_OBUF[9]_inst_i_1.I1
+q[6]       : [INPUT] addr[3] | connections: addr_IBUF[3]_inst.I
+q[7]       : [WIRE] addr_IBUF[3] | connections: addr_IBUF[3]_inst.O, decode_out_OBUF[0]_inst_i_1.I0, decode_out_OBUF[10]_inst_i_1.I2, decode_out_OBUF[11]_inst_i_1.I4, decode_out_OBUF[12]_inst_i_1.I2, decode_out_OBUF[13]_inst_i_1.I4, decode_out_OBUF[14]_inst_i_1.I4, decode_out_OBUF[15]_inst_i_1.I3, decode_out_OBUF[1]_inst_i_1.I3, decode_out_OBUF[2]_inst_i_1.I3, decode_out_OBUF[3]_inst_i_1.I3, decode_out_OBUF[4]_inst_i_1.I3, decode_out_OBUF[5]_inst_i_1.I3, decode_out_OBUF[6]_inst_i_1.I3, decode_out_OBUF[7]_inst_i_1.I0, decode_out_OBUF[8]_inst_i_1.I0, decode_out_OBUF[9]_inst_i_1.I2
+q[8]       : [WIRE] decode_out_OBUF[0] | connections: decode_out_OBUF[0]_inst.I, decode_out_OBUF[0]_inst_i_1.O
+q[9]       : [OUTPUT] decode_out[0] | connections: decode_out_OBUF[0]_inst.O
+q[10]      : [WIRE] en_IBUF | connections: decode_out_OBUF[0]_inst_i_1.I4, decode_out_OBUF[10]_inst_i_1.I4, decode_out_OBUF[11]_inst_i_1.I3, decode_out_OBUF[12]_inst_i_1.I4, decode_out_OBUF[13]_inst_i_1.I3, decode_out_OBUF[14]_inst_i_1.I3, decode_out_OBUF[15]_inst_i_1.I0, decode_out_OBUF[1]_inst_i_1.I4, decode_out_OBUF[2]_inst_i_1.I4, decode_out_OBUF[3]_inst_i_1.I4, decode_out_OBUF[4]_inst_i_1.I4, decode_out_OBUF[5]_inst_i_1.I4, decode_out_OBUF[6]_inst_i_1.I4, decode_out_OBUF[7]_inst_i_1.I3, decode_out_OBUF[8]_inst_i_1.I4, decode_out_OBUF[9]_inst_i_1.I4, en_IBUF_inst.O
+q[11]      : decode_out_OBUF[0]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[12]      : [WIRE] decode_out_OBUF[10] | connections: decode_out_OBUF[10]_inst.I, decode_out_OBUF[10]_inst_i_1.O
+q[13]      : [OUTPUT] decode_out[10] | connections: decode_out_OBUF[10]_inst.O
+q[14]      : decode_out_OBUF[10]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[15]      : [WIRE] decode_out_OBUF[11] | connections: decode_out_OBUF[11]_inst.I, decode_out_OBUF[11]_inst_i_1.O
+q[16]      : [OUTPUT] decode_out[11] | connections: decode_out_OBUF[11]_inst.O
+q[17]      : decode_out_OBUF[11]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[18]      : [WIRE] decode_out_OBUF[12] | connections: decode_out_OBUF[12]_inst.I, decode_out_OBUF[12]_inst_i_1.O
+q[19]      : [OUTPUT] decode_out[12] | connections: decode_out_OBUF[12]_inst.O
+q[20]      : decode_out_OBUF[12]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[21]      : [WIRE] decode_out_OBUF[13] | connections: decode_out_OBUF[13]_inst.I, decode_out_OBUF[13]_inst_i_1.O
+q[22]      : [OUTPUT] decode_out[13] | connections: decode_out_OBUF[13]_inst.O
+q[23]      : decode_out_OBUF[13]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[24]      : [WIRE] decode_out_OBUF[14] | connections: decode_out_OBUF[14]_inst.I, decode_out_OBUF[14]_inst_i_1.O
+q[25]      : [OUTPUT] decode_out[14] | connections: decode_out_OBUF[14]_inst.O
+q[26]      : decode_out_OBUF[14]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[27]      : [WIRE] decode_out_OBUF[15] | connections: decode_out_OBUF[15]_inst.I, decode_out_OBUF[15]_inst_i_1.O
+q[28]      : [OUTPUT] decode_out[15] | connections: decode_out_OBUF[15]_inst.O
+q[29]      : decode_out_OBUF[15]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[30]      : [WIRE] decode_out_OBUF[1] | connections: decode_out_OBUF[1]_inst.I, decode_out_OBUF[1]_inst_i_1.O
+q[31]      : [OUTPUT] decode_out[1] | connections: decode_out_OBUF[1]_inst.O
+q[32]      : decode_out_OBUF[1]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[33]      : [WIRE] decode_out_OBUF[2] | connections: decode_out_OBUF[2]_inst.I, decode_out_OBUF[2]_inst_i_1.O
+q[34]      : [OUTPUT] decode_out[2] | connections: decode_out_OBUF[2]_inst.O
+q[35]      : decode_out_OBUF[2]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[36]      : [WIRE] decode_out_OBUF[3] | connections: decode_out_OBUF[3]_inst.I, decode_out_OBUF[3]_inst_i_1.O
+q[37]      : [OUTPUT] decode_out[3] | connections: decode_out_OBUF[3]_inst.O
+q[38]      : decode_out_OBUF[3]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[39]      : [WIRE] decode_out_OBUF[4] | connections: decode_out_OBUF[4]_inst.I, decode_out_OBUF[4]_inst_i_1.O
+q[40]      : [OUTPUT] decode_out[4] | connections: decode_out_OBUF[4]_inst.O
+q[41]      : decode_out_OBUF[4]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[42]      : [WIRE] decode_out_OBUF[5] | connections: decode_out_OBUF[5]_inst.I, decode_out_OBUF[5]_inst_i_1.O
+q[43]      : [OUTPUT] decode_out[5] | connections: decode_out_OBUF[5]_inst.O
+q[44]      : decode_out_OBUF[5]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[45]      : [WIRE] decode_out_OBUF[6] | connections: decode_out_OBUF[6]_inst.I, decode_out_OBUF[6]_inst_i_1.O
+q[46]      : [OUTPUT] decode_out[6] | connections: decode_out_OBUF[6]_inst.O
+q[47]      : decode_out_OBUF[6]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[48]      : [WIRE] decode_out_OBUF[7] | connections: decode_out_OBUF[7]_inst.I, decode_out_OBUF[7]_inst_i_1.O
+q[49]      : [OUTPUT] decode_out[7] | connections: decode_out_OBUF[7]_inst.O
+q[50]      : decode_out_OBUF[7]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[51]      : [WIRE] decode_out_OBUF[8] | connections: decode_out_OBUF[8]_inst.I, decode_out_OBUF[8]_inst_i_1.O
+q[52]      : [OUTPUT] decode_out[8] | connections: decode_out_OBUF[8]_inst.O
+q[53]      : decode_out_OBUF[8]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[54]      : [WIRE] decode_out_OBUF[9] | connections: decode_out_OBUF[9]_inst.I, decode_out_OBUF[9]_inst_i_1.O
+q[55]      : [OUTPUT] decode_out[9] | connections: decode_out_OBUF[9]_inst.O
+q[56]      : decode_out_OBUF[9]_inst_i_1 [ANCILLA] LUT5:O:direct:LUT5_O:a0
+q[57]      : [INPUT] en | connections: en_IBUF_inst.I
+
+----------------------------------------------------------------------------------------
+[5. INSTANCE SUMMARY]
+Instance    | Primitive | Parameters | Connections
+----------------------------------------------------------------------------------------------------
+addr_IBUF[0]_inst | IBUF      | -          | .I(addr[0]), .O(addr_IBUF[0])
+addr_IBUF[1]_inst | IBUF      | -          | .I(addr[1]), .O(addr_IBUF[1])
+addr_IBUF[2]_inst | IBUF      | -          | .I(addr[2]), .O(addr_IBUF[2])
+addr_IBUF[3]_inst | IBUF      | -          | .I(addr[3]), .O(addr_IBUF[3])
+decode_out_OBUF[0]_inst | OBUF      | -          | .I(decode_out_OBUF[0]), .O(decode_out[0])
+decode_out_OBUF[0]_inst_i_1 | LUT5      | init=0x10000 | .I0(addr_IBUF[3]), .I1(addr_IBUF[1]), .I2(addr_IBUF[0]), .I3(addr_IBUF[2]), .I4(en_IBUF), .O(decode_out_OBUF[0])
+decode_out_OBUF[10]_inst | OBUF      | -          | .I(decode_out_OBUF[10]), .O(decode_out[10])
+decode_out_OBUF[10]_inst_i_1 | LUT5      | init=0x200000 | .I0(addr_IBUF[1]), .I1(addr_IBUF[2]), .I2(addr_IBUF[3]), .I3(addr_IBUF[0]), .I4(en_IBUF), .O(decode_out_OBUF[10])
+decode_out_OBUF[11]_inst | OBUF      | -          | .I(decode_out_OBUF[11]), .O(decode_out[11])
+decode_out_OBUF[11]_inst_i_1 | LUT5      | init=0x40000000 | .I0(addr_IBUF[2]), .I1(addr_IBUF[1]), .I2(addr_IBUF[0]), .I3(en_IBUF), .I4(addr_IBUF[3]), .O(decode_out_OBUF[11])
+decode_out_OBUF[12]_inst | OBUF      | -          | .I(decode_out_OBUF[12]), .O(decode_out[12])
+decode_out_OBUF[12]_inst_i_1 | LUT5      | init=0x200000 | .I0(addr_IBUF[2]), .I1(addr_IBUF[0]), .I2(addr_IBUF[3]), .I3(addr_IBUF[1]), .I4(en_IBUF), .O(decode_out_OBUF[12])
+decode_out_OBUF[13]_inst | OBUF      | -          | .I(decode_out_OBUF[13]), .O(decode_out[13])
+decode_out_OBUF[13]_inst_i_1 | LUT5      | init=0x40000000 | .I0(addr_IBUF[1]), .I1(addr_IBUF[2]), .I2(addr_IBUF[0]), .I3(en_IBUF), .I4(addr_IBUF[3]), .O(decode_out_OBUF[13])
+decode_out_OBUF[14]_inst | OBUF      | -          | .I(decode_out_OBUF[14]), .O(decode_out[14])
+decode_out_OBUF[14]_inst_i_1 | LUT5      | init=0x40000000 | .I0(addr_IBUF[0]), .I1(addr_IBUF[1]), .I2(addr_IBUF[2]), .I3(en_IBUF), .I4(addr_IBUF[3]), .O(decode_out_OBUF[14])
+decode_out_OBUF[15]_inst | OBUF      | -          | .I(decode_out_OBUF[15]), .O(decode_out[15])
+decode_out_OBUF[15]_inst_i_1 | LUT5      | init=0x80000000 | .I0(en_IBUF), .I1(addr_IBUF[1]), .I2(addr_IBUF[0]), .I3(addr_IBUF[3]), .I4(addr_IBUF[2]), .O(decode_out_OBUF[15])
+decode_out_OBUF[1]_inst | OBUF      | -          | .I(decode_out_OBUF[1]), .O(decode_out[1])
+decode_out_OBUF[1]_inst_i_1 | LUT5      | init=0x20000 | .I0(addr_IBUF[0]), .I1(addr_IBUF[2]), .I2(addr_IBUF[1]), .I3(addr_IBUF[3]), .I4(en_IBUF), .O(decode_out_OBUF[1])
+decode_out_OBUF[2]_inst | OBUF      | -          | .I(decode_out_OBUF[2]), .O(decode_out[2])
+decode_out_OBUF[2]_inst_i_1 | LUT5      | init=0x20000 | .I0(addr_IBUF[1]), .I1(addr_IBUF[2]), .I2(addr_IBUF[0]), .I3(addr_IBUF[3]), .I4(en_IBUF), .O(decode_out_OBUF[2])
+decode_out_OBUF[3]_inst | OBUF      | -          | .I(decode_out_OBUF[3]), .O(decode_out[3])
+decode_out_OBUF[3]_inst_i_1 | LUT5      | init=0x200000 | .I0(addr_IBUF[0]), .I1(addr_IBUF[2]), .I2(addr_IBUF[1]), .I3(addr_IBUF[3]), .I4(en_IBUF), .O(decode_out_OBUF[3])
+decode_out_OBUF[4]_inst | OBUF      | -          | .I(decode_out_OBUF[4]), .O(decode_out[4])
+decode_out_OBUF[4]_inst_i_1 | LUT5      | init=0x20000 | .I0(addr_IBUF[2]), .I1(addr_IBUF[0]), .I2(addr_IBUF[1]), .I3(addr_IBUF[3]), .I4(en_IBUF), .O(decode_out_OBUF[4])
+decode_out_OBUF[5]_inst | OBUF      | -          | .I(decode_out_OBUF[5]), .O(decode_out[5])
+decode_out_OBUF[5]_inst_i_1 | LUT5      | init=0x200000 | .I0(addr_IBUF[0]), .I1(addr_IBUF[1]), .I2(addr_IBUF[2]), .I3(addr_IBUF[3]), .I4(en_IBUF), .O(decode_out_OBUF[5])
+decode_out_OBUF[6]_inst | OBUF      | -          | .I(decode_out_OBUF[6]), .O(decode_out[6])
+decode_out_OBUF[6]_inst_i_1 | LUT5      | init=0x200000 | .I0(addr_IBUF[1]), .I1(addr_IBUF[0]), .I2(addr_IBUF[2]), .I3(addr_IBUF[3]), .I4(en_IBUF), .O(decode_out_OBUF[6])
+decode_out_OBUF[7]_inst | OBUF      | -          | .I(decode_out_OBUF[7]), .O(decode_out[7])
+decode_out_OBUF[7]_inst_i_1 | LUT5      | init=0x40000000 | .I0(addr_IBUF[3]), .I1(addr_IBUF[1]), .I2(addr_IBUF[0]), .I3(en_IBUF), .I4(addr_IBUF[2]), .O(decode_out_OBUF[7])
+decode_out_OBUF[8]_inst | OBUF      | -          | .I(decode_out_OBUF[8]), .O(decode_out[8])
+decode_out_OBUF[8]_inst_i_1 | LUT5      | init=0x20000 | .I0(addr_IBUF[3]), .I1(addr_IBUF[2]), .I2(addr_IBUF[1]), .I3(addr_IBUF[0]), .I4(en_IBUF), .O(decode_out_OBUF[8])
+decode_out_OBUF[9]_inst | OBUF      | -          | .I(decode_out_OBUF[9]), .O(decode_out[9])
+decode_out_OBUF[9]_inst_i_1 | LUT5      | init=0x200000 | .I0(addr_IBUF[0]), .I1(addr_IBUF[2]), .I2(addr_IBUF[3]), .I3(addr_IBUF[1]), .I4(en_IBUF), .O(decode_out_OBUF[9])
+en_IBUF_inst | IBUF      | -          | .I(en), .O(en_IBUF)
