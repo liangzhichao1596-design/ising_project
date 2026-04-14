@@ -1,0 +1,27 @@
+========================================================================================
+ MUX2_1 FORMAL-LIKE ISING EXAMPLE
+========================================================================================
+Source Netlist: E:\zcling\ising_project\netlist_to_ising\mux2_1\mux2_1.v
+Generated Ising Report: E:\zcling\ising_project\netlist_to_ising\mux2_1\mux2_1_ising_example.log
+
+Interpretation:
+1. Fix primary inputs in1/in2/sel.
+2. Minimize the netlist Ising Hamiltonian.
+3. Read the output value from the minimum-energy states.
+4. Force the wrong output and check that the minimum energy rises.
+
+Case Table:
+in1 in2 sel | expected | minE(free) | outputs@minE | minE(correct) | minE(wrong)
+----------------------------------------------------------------------------------------
+ 0   0   0  |    0     |      0     |     0        |        0      |       2
+ 0   0   1  |    0     |      0     |     0        |        0      |       2
+ 0   1   0  |    1     |      0     |     1        |        0      |       2
+ 0   1   1  |    0     |      0     |     0        |        0      |       2
+ 1   0   0  |    0     |      0     |     0        |        0      |       2
+ 1   0   1  |    1     |      0     |     1        |        0      |       2
+ 1   1   0  |    1     |      0     |     1        |        0      |       2
+ 1   1   1  |    1     |      0     |     1        |        0      |       2
+
+Conclusion:
+All 8 input patterns passed: the minimum-energy state matches the golden mux behavior, and forcing the wrong output raises the energy.
+========================================================================================

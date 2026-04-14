@@ -25,14 +25,28 @@ def spin_to_bit(spin: int) -> int:
     return 1 if int(spin) > 0 else 0
 
 
-def parse_verilog_int(value: str | int) -> int:
+def parse_verilog_int(value: str | int) -> int:     #输入：可以是字符串 或 整数。输出：一定是 Python 整数 int
     if isinstance(value, int):
         return value
+    #如果输入本来就是整数，直接返回，不处理
     text = str(value).strip().replace("_", "")
+    # str(value)：
+    # 把 value 转成字符串
+    # 例如 8'hAC 保持不变，数字 10 变成 "10"
+
+    # .strip()：
+    # 去掉字符串前后多余的空白字符
+    # 比如 "  8'hAC  " 会变成 "8'hAC"
+
+    # .replace("_", "")：
+    # 把字符串里的下划线 _ 全部删除
+    # 这样 8'h_ A_C 或 0b1010_0011 这样的写法也能正常解析
     if text.startswith(("0x", "0X")):
         return int(text, 16)
+    #如果字符串以 0x 或 0X 开头，表示这是一个十六进制数，使用 int(text, 16) 把它转换成整数
     if text.startswith(("0b", "0B")):
         return int(text, 2)
+    #如果字符串以 0b 或 0B 开头，表示这是一个二进制数，使用 int(text, 2) 把它转换成整数
     if "'" in text:
         _, payload = text.split("'", 1)
         base = payload[0].lower()
@@ -43,8 +57,14 @@ def parse_verilog_int(value: str | int) -> int:
             return int(digits, 2)
         if base == "d":
             return int(digits, 10)
+    #如果字符串里包含单引号 '，按照 Verilog 的格式解析
+    #     按 ' 分割成两部分
+    # 8'hAC → 分割后得到 hAC
+    # 取第一个字符当进制类型：h=16，b=2，d=10
+    # 剩下的是数字
     if text.startswith(("x\"", "X\"")) and text.endswith("\""):
         return int(text[2:-1], 16)
+    #如果字符串以 x" 或 X" 开头，并以 " 结尾，表示这是 Verilog 中的另一种十六进制表示法，使用 int(text[2:-1], 16) 把它转换成整数
     return int(text, 10)
 
 
@@ -411,24 +431,27 @@ class PrimitiveDefinition:
 
 class PrimitiveBuilder:
     def __init__(self, primitive_name: str):
-        self.primitive_name = primitive_name
-        self.q_count = 0
-        self.port_to_q: dict[str, str] = {}
-        self.var_map: dict[str, str] = {}
-        self.polynomial = Polynomial()
-        self.base_relations = load_base_relations()
-        self.const_cache: dict[int, str] = {}
-        self.internal_counter = 0
+        self.primitive_name = primitive_name     #primitive_name：原语名称，例如 LUT3
+        self.q_count = 0     #q_count：量子比特计数器，用于生成唯一的量子比特名称
+        self.port_to_q: dict[str, str] = {}   #port_to_q：端口到量子比特的映射
+        self.var_map: dict[str, str] = {}   #var_map：量子比特名称到描述的映射
+        self.polynomial = Polynomial()   #polynomial：Ising 模型的多项式表示
+        self.base_relations = load_base_relations() #base_relations：预定义的基本关系模型，例如 BUF、NOT、OR2、XOR2、MUX2 等
+        self.const_cache: dict[int, str] = {}   #const_cache：常量量子比特缓存，用于存储已构建的常量量子比特
+        self.internal_counter = 0   #internal_counter：内部量子比特计数器，用于生成唯一的内部量子比特名称
 
     def add_input(self, port: str) -> str:
         return self._add_qubit(port, f"[INPUT] {port}")
+    #add_input：添加输入端口，返回对应的量子比特名称
 
     def add_output(self, port: str) -> str:
         return self._add_qubit(port, f"[OUTPUT] {port}")
+    #add_output：添加输出端口，返回对应的量子比特名称
 
     def add_internal(self, name: str) -> str:
         self.internal_counter += 1
         return self._add_qubit(f"__internal__{self.internal_counter}", f"[ANCILLA] {name}")
+    #add_internal：添加内部量子比特，返回对应的量子比特名称
 
     def _add_qubit(self, port: str, description: str) -> str:
         q_name = f"q[{self.q_count}]"
@@ -436,13 +459,16 @@ class PrimitiveBuilder:
         self.port_to_q[port] = q_name
         self.var_map[q_name] = description
         return q_name
+    #_add_qubit：添加量子比特，返回对应的量子比特名称
 
     def q(self, port: str) -> str:
         return self.port_to_q[port]
+    #q：获取端口对应的量子比特名称
 
     def add_relation(self, relation_name: str, bindings: dict[str, str], label: str) -> list[str]:
         model = self.base_relations[relation_name]
         return self.add_model(model, bindings, label)
+    #add_relation：添加关系模型，返回对应的量子量子比特名称列表
 
     def add_model(self, model: RelationModel, bindings: dict[str, str], label: str) -> list[str]:
         rename_map = dict(bindings)
@@ -453,6 +479,7 @@ class PrimitiveBuilder:
             ancilla_qubits.append(q_name)
         self.polynomial.extend(model.polynomial.renamed(rename_map))
         return ancilla_qubits
+    #add_model：添加关系模型，返回对应的量子量子比特名称列表
 
     def const_qubit(self, bit: int) -> str:
         if bit not in self.const_cache:
@@ -460,6 +487,7 @@ class PrimitiveBuilder:
             self.add_relation(f"CONST{bit}", {"x": q_name}, f"{self.primitive_name}_CONST{bit}")
             self.const_cache[bit] = q_name
         return self.const_cache[bit]
+    #const_qubit：添加常量量子比特，返回对应的量子比特名称
 
 
 def default_lut_init(width: int) -> int:
@@ -589,9 +617,11 @@ def build_lut62(builder: PrimitiveBuilder, params: dict[str, int]) -> None:
 
 
 def build_buf_family(input_port: str, output_port: str) -> Callable[[PrimitiveBuilder, dict[str, int]], None]:
+    #Callable[[PrimitiveBuilder, dict[str, int]], None]：返回一个可调用对象，该对象接收 PrimitiveBuilder 和参数字典，返回 None
     def _builder(builder: PrimitiveBuilder, _params: dict[str, int]) -> None:
         builder.add_relation("BUF", {"a": builder.q(input_port), "x": builder.q(output_port)}, f"{builder.primitive_name}:{output_port}")
-
+        #"a" 绑定到 builder.q(input_port)（输入端口的量子比特）
+        #"x" 绑定到 builder.q(output_port)（输出端口的量子比特）
     return _builder
 
 
@@ -1067,8 +1097,16 @@ def write_log(
     return log_path
 
 
+
+# run_named_primitive
+# 读取对应原语（primitive）的定义
+# 解析可选参数，比如 --init
+# 构建该原语对应的 Ising 模型
+# 把结果写成日志文件并返回文件路径
+#输入格式：run_named_primitive("LUT3", Path("./output"))
 def run_named_primitive(primitive_name: str, output_dir: Path, argv: list[str] | None = None) -> Path:
     definition = PRIMITIVES[primitive_name]
+    # 从全局字典 PRIMITIVES 中取出这个 primitive 的定义，例如 LUT3 的输入端口、输出端口、构建函数、默认 init 值等
     parser = argparse.ArgumentParser(description=f"Generate Ising report for {primitive_name}")
     if "init" in definition.default_params:
         parser.add_argument("--init", default=f"0x{definition.default_params['init']:X}")
@@ -1077,8 +1115,9 @@ def run_named_primitive(primitive_name: str, output_dir: Path, argv: list[str] |
     params: dict[str, int] = {}
     if hasattr(args, "init"):
         params["init"] = parse_verilog_int(args.init)
-
+    #检查 args 对象是否有 init 属性，调用 parse_verilog_int 函数，将用户输入的 init 值（可能是字符串，如 "0xA5"）解析为整数，赋值给 params["init"] 键
     builder, definition, resolved_params = build_primitive(primitive_name, params)
+    #调用 build_primitive 函数，构建 Ising 模型：Builder 对象包含了原语的 qubit 定义、约束关系等；Definition 是原语的定义对象；resolved_params 是解析后的参数字典
     return write_log(primitive_name, output_dir, builder, definition, resolved_params)
 
 

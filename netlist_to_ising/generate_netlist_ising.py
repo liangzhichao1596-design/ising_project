@@ -9,6 +9,13 @@ from itertools import product
 from pathlib import Path
 
 THIS_DIR = Path(__file__).resolve().parent
+# 2Path(__file__)
+# 把字符串路径变成 Path 对象（更强大、更安全的路径处理工具）。
+# 3resolve()
+# 把路径变成绝对路径（完整路径），避免相对路径出错。
+# 4parent
+# 取上一级目录，也就是文件所在的文件夹。
+# 预期结果: E:\zcling\ising_project\netlist_to_ising
 PRIMITIVE_COMMON_DIR = THIS_DIR.parent / "primitive" / "common"
 sys.path.append(str(PRIMITIVE_COMMON_DIR))
 
@@ -57,7 +64,10 @@ def parse_instances(text: str) -> list[Instance]:
         params: dict[str, int] = {}
         if param_block:
             for param_name, param_value in re.findall(r"\.(\w+)\s*\(\s*([^)]+?)\s*\)", param_block, flags=re.S):
-                params[param_name] = parse_verilog_int(param_value.strip())
+                # Vivado netlists typically emit parameters like ".INIT(...)" while
+                # the primitive library resolves them via lowercase keys such as
+                # "init". Normalize here so the intended parameter value is used.
+                params[param_name.lower()] = parse_verilog_int(param_value.strip())
         connections: dict[str, str] = {}
         for port_name, signal_name in re.findall(r"\.(\w+)\s*\(\s*([^)]+?)\s*\)", connection_block, flags=re.S):
             connections[port_name] = signal_name.strip()
